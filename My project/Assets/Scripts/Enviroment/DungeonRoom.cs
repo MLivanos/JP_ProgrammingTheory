@@ -13,6 +13,7 @@ public class DungeonRoom : MonoBehaviour
     protected int maxZ = 4;
     protected int minX = 2;
     protected int minZ = 2;
+    protected int wallY = 5;
     // ENCAPSULATION: Ensure that room size is always > 0
     public int sizeX{
         get
@@ -51,20 +52,20 @@ public class DungeonRoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        setRandomRoomSize();
-        dungeonWalls = new GameObject[4];
-        dungeonWalls[0] = addDooredWall(sizeX, 5, Random.Range(5,scale * sizeX - 5));
-        dungeonWalls[1] = addWall(sizeX, 5);
-        dungeonWalls[2] = addWall(sizeZ, 5);
-        dungeonWalls[3] = addWall(sizeZ, 5);
-        placeWalls(dungeonWalls);
-        assignChildren(dungeonWalls);
+        
     }
 
     // Update is called once per frame
-    void Update()
+    public void SetUp()
     {
-        
+        setRandomRoomSize();
+        dungeonWalls = new GameObject[4];
+        dungeonWalls[0] = addDooredWall(sizeX, wallY, Random.Range(5,scale * sizeX - 5));
+        dungeonWalls[1] = addWall(sizeX, wallY);
+        dungeonWalls[2] = addWall(sizeZ, wallY);
+        dungeonWalls[3] = addWall(sizeZ, wallY);
+        placeWalls(dungeonWalls);
+        assignChildren(dungeonWalls);
     }
 
     void setRandomRoomSize()
@@ -110,8 +111,8 @@ public class DungeonRoom : MonoBehaviour
         walls[2].transform.Translate(-1 * sizeX * scale / 2, 0, 0);
         walls[1].transform.Translate(0, 0, sizeZ * scale / 2);
         walls[0].transform.Translate(0, 0, -1 * sizeZ * scale / 2);
-        walls[3].transform.Rotate(Vector3.up, 90);
-        walls[2].transform.Rotate(Vector3.up, 90);
+        walls[3].transform.Rotate(transform.up, 90);
+        walls[2].transform.Rotate(transform.up, 90);
     }
 
     void assignChildren(GameObject[] walls)
