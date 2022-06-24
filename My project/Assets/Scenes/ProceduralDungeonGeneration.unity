@@ -352,14 +352,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3013265678350162844, guid: af9af73c7b0ae4fac91de15e9b64d8b6, type: 3}
-      propertyPath: wallPrefab
-      value: 
-      objectReference: {fileID: 1129809028051283657, guid: c366aeb9258ee49cd8fe01f2d9eaae86, type: 3}
     - target: {fileID: 3013265678350162845, guid: af9af73c7b0ae4fac91de15e9b64d8b6, type: 3}
       propertyPath: m_Name
       value: DungeonRoom
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3013265678350162843, guid: af9af73c7b0ae4fac91de15e9b64d8b6, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af9af73c7b0ae4fac91de15e9b64d8b6, type: 3}

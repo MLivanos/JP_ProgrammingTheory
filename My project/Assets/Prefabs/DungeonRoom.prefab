@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3013265678350162840}
   - component: {fileID: 3013265678350162841}
   - component: {fileID: 3013265678350162842}
-  - component: {fileID: 3013265678350162843}
   - component: {fileID: 3013265678350162844}
   m_Layer: 0
   m_Name: DungeonRoom
@@ -100,18 +99,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &3013265678350162843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3013265678350162845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be7e8b5f683fb4c888d7ad18a0c3d485, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3013265678350162844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,3 +111,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be7e8b5f683fb4c888d7ad18a0c3d485, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wallPrefab: {fileID: 1129809028051283657, guid: c366aeb9258ee49cd8fe01f2d9eaae86, type: 3}
