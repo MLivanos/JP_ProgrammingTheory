@@ -350,6 +350,10 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/DungeonManager.cs"
 "Assets/Scripts/DungeonRoomController.cs"
+"Assets/Scripts/Enemy.cs"
+"Assets/Scripts/Entity.cs"
+"Assets/Scripts/Skeleton.cs"
+"Assets/Scripts/Spider.cs"
 -langversion:9.0
 
 /deterministic
