@@ -17,6 +17,18 @@ public abstract class Entity : MonoBehaviour
     protected bool dead;
     protected Rigidbody rb;
 
+    void Update()
+    {
+        if (!IsAlive() && !dead)
+        {
+            Die();
+        }
+        if (dead)
+        {
+            rb.velocity = Vector3.zero;
+        }
+    }
+
     // ABSTRACTION: Entities windup, attack, and recover, but this is all taken place in the attack method
     protected virtual void Attack(Entity other)
     {

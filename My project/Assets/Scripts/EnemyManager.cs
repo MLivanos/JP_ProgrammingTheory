@@ -6,8 +6,8 @@ public class EnemyManager : MonoBehaviour
 {
     private GameObject player;
     [SerializeField] private GameObject[] enemyTypes;
-    private int minEnemies = 2;
-    private int maxEnemies = 5;
+    private int minEnemies = 1;
+    private int maxEnemies = 3;
     public int roomX = 0;
     public int roomZ = 0;
     private float scaleX = 9.75f;
@@ -30,9 +30,9 @@ public class EnemyManager : MonoBehaviour
         for(int i = 0; i < nEnemies; i++)
         {
             GameObject enemyChoice = enemyTypes[Random.Range(0, enemyTypes.Length)];
-            float xPlacement = Random.Range(0, 10) + roomX * scaleX;
-            float zPlacement = Random.Range(0, 10) + roomZ * scaleZ;;
-            GameObject enemyGO = (GameObject)Instantiate(enemyChoice, new Vector3(xPlacement, 0, zPlacement), enemyChoice.transform.rotation);
+            float xPlacement = Random.Range(-4, 4) + roomX * scaleX;
+            float zPlacement = Random.Range(-4, 4) + roomZ * scaleZ;;
+            GameObject enemyGO = (GameObject)Instantiate(enemyChoice, new Vector3(xPlacement, enemyChoice.transform.position.y, zPlacement), enemyChoice.transform.rotation);
             Enemy enemy = enemyGO.GetComponent<Enemy>();
             enemy.SetTarget(player);
         }

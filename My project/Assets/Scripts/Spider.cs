@@ -20,18 +20,6 @@ public class Spider : Enemy
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
-    void Update()
-    {
-        if (!IsAlive() && !dead)
-        {
-            Die();
-        }
-        if (dead)
-        {
-            rb.velocity = Vector3.zero;
-        }
-    }
-
     void FixedUpdate()
     {
         if (rb.velocity.magnitude < speed && !dead)

@@ -25,13 +25,4 @@ public class Skeleton : Enemy
             Accelerate();
         }
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        GameObject other = collision.collider.gameObject;
-        if (other.CompareTag("Spider"))
-        {
-            Attack(other.GetComponent<Entity>());
-        }
-    }
 }

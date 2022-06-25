@@ -11,6 +11,7 @@ public class Enemy : Entity
     protected virtual void Accelerate()
     {
         direction = target.transform.position - transform.position;
+        direction.y = 0;
         rb.AddForce(direction * acceleration * Time.deltaTime, ForceMode.Acceleration);
     }
 
@@ -30,5 +31,14 @@ public class Enemy : Entity
     public void SetTarget(GameObject entity)
     {
         target = entity;
+    }
+    
+    void OnCollisionStay(Collision collision)
+    {
+        GameObject other = collision.collider.gameObject;
+        if (other.CompareTag("Player") && !inAttack)
+        {
+            Attack(other.GetComponent<Entity>());
+        }
     }
 }
