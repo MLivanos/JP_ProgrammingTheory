@@ -20,7 +20,10 @@ public class DungeonRoomController : MonoBehaviour
 
     void Start()
     {
-
+        if(doors == null)
+        {
+            SetUp();
+        }
     }
 
     void Update()
