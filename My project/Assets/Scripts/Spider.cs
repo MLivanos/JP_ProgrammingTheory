@@ -9,7 +9,6 @@ public class Spider : Enemy
     void Start()
     {
         // POLYMORPHISM: Changing various aspects of the enemy
-        direction = new Vector3(0,0,-1);
         attackRange = 0.1f;
         health = 50;
         speed = 6;

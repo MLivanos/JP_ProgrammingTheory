@@ -7,7 +7,6 @@ public class Skeleton : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        direction = new Vector3(0,0,1);
         attackRange = 0.2f;
         health = 80;
         speed = 3;
